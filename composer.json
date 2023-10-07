@@ -1,0 +1,23 @@
+{
+    "name": "panix/mod-fcm",
+    "description": "Yii2 fcm",
+    "keywords": ["module", "yii2", "fcm"],
+    "homepage": "https://github.com/andrtechno/mod-fcm",
+    "type": "pixelion-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PIXELION CMS",
+            "email": "dev@pixelion.com.ua",
+            "homepage": "https://pixelion.com.ua"
+        }
+    ],
+    "require": {
+        "google/cloud-firestore": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "panix\\mod\\fcm\\": ""
+        }
+    }
+}
