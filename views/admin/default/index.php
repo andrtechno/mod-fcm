@@ -2,7 +2,6 @@
 use panix\engine\grid\GridView;
 use panix\engine\widgets\Pjax;
 
-echo \panix\ext\fancybox\Fancybox::widget(['target' => '.image a']);
 Pjax::begin([
     'dataProvider' => $dataProvider
 ]);
