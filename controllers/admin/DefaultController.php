@@ -32,7 +32,7 @@ class DefaultController extends AdminController
         $this->pageName = Yii::t('chatgpt/default', 'MODULE_NAME');
         $this->view->params['breadcrumbs'] = [$this->pageName];
 
-        $searchModel = new ChatGPTSearch();
+        /*$searchModel = new ChatGPTSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
         if (Yii::$app->user->can("/{$this->module->id}/{$this->id}/*") || Yii::$app->user->can("/{$this->module->id}/{$this->id}/create")) {
             $this->buttons = [
@@ -43,10 +43,10 @@ class DefaultController extends AdminController
                     'options' => ['class' => 'btn btn-success']
                 ]
             ];
-        }
+        }*/
         return $this->render('index', [
-            'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
+            //'dataProvider' => $dataProvider,
+            //'searchModel' => $searchModel,
         ]);
 
     }
