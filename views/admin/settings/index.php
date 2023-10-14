@@ -20,7 +20,6 @@ $form = ActiveForm::begin(['id' => 'fcm-form']);
     <div class="card-body">
         <?= $form->field($model, 'server_key'); ?>
         <?= $form->field($model, 'sender_id'); ?>
-
     </div>
     <div class="card-footer text-center">
         <?= $model->submitButton(); ?>

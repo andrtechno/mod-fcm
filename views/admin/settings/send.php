@@ -21,10 +21,9 @@ $form = ActiveForm::begin(['id' => 'notification-form']);
         <?= $form->field($model, 'device_id'); ?>
         <?= $form->field($model, 'title'); ?>
         <?= $form->field($model, 'body')->textarea(); ?>
-
     </div>
     <div class="card-footer text-center">
-        <?= Html::submitButton('submit'); ?>
+        <?= Html::submitButton(Yii::t('app/default', 'SEND'), ['class' => 'btn btn-success']); ?>
     </div>
 </div>
 
