@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "reactnativeapp-a64d2",
+    "private_key_id": "a8482ab39795d379628cc4bf4c774975f51d3d91",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC+mtAOyYi1xMLI\ngiLHKpCCfB2glvUZwZMDoRrBw8sK92e5ebjIGsHDZZA+Ghw7gC8ZK6udG3iAg1Jh\nH1surKtKLL82RTSQttyZfFdapV6cRMXc0CcWdJmb5N51f3imHgtX8yrubBjtkNWg\nxS3EY75ioOzIFFL3CnUqh4mUaShQndthZsWWM3r4jDmRZKaIHkHCfY1OQMIPEMRl\ngZiifgNasav920I5D87RMOnSIYlCWty5ZFP38SDIj4dmTB+HuwCcscpjyXJy9u+u\nioWSSPz/2tyQr6hdNZXnIc2ZUT3xyJ273FR5qXKllqb00lFpObvSfsjk0x1aw0YY\nJsoh2X2vAgMBAAECggEACfojkuqUt+MNSR6awG8nclUZ3eqY+Nirn+CCfIsJqVDL\nAqfu9raD1v0NgFqwiKLMlFY3XPlvpNZ67O+Nv9M1AiR2e9pChqKzyGr8TZfjbG2j\nJ8xTh3biBYmE5YSfJZ7j/B4T7LgG1ASlUg2QODv6XsJKsqxxrVHEUU4X8wdQH2wU\nyTdcJ6gho4j0xF3wndWNJi71L9mKqXxBg2yh9cgH1j/NTIR5nFWwSDTUM4uy/EU6\n+D7QqJ3DgleIpEwnCYLy/4LG5+VE3+W2FZXQqbz4upPtPgRLBWIOm5qGfFwTZmX9\nED70QSQ7zg68kqSfLNxmhC6BM0dkmOsyBh+wb543AQKBgQDj0ETDhPMjiJGIsbnb\nPezdQ4jYJdtxwjzlAUhopWMVSJdDCLNJrT6BdEDmMUqy48NA1F4Zoqg+C9icIdqn\ns/1vJsdwP6SsIafMlhY9P0KKZ9/rL3rQCVOqWnJnKQSYo7fwRJb5Qo8QDnZLhcSW\nQIUWs41NHCfpwjL2Em3WiBGyrwKBgQDWL/93adjHGdFmoqVikifqncSVmx05r9LK\naJP6HbeFY4IifPPfj6NvxdoBvBWrRqiuGthEJsMTAu7jhNwU7+mPCc0RcaDa+erO\nOaHloRKTnIVPfFRyHbL7W6WUkLgfisfYxJ47+kjq6G1JFcm5aBf6yKzzFmu0hi8n\n0CnRI3OlAQKBgQCROYk8YppkgoDT9QgX3SgL/StVLvzvTfVnvyOboiLBxJ64mulA\nBHKeL6/XjoCh/VPRFhBOo0RBGWgiT+qFkdXzb3Mf+VJOcL35S4wtyw/uDz3NPV07\nFVcCd9oKLTnC3Es7nV3o1CdDAxUiG8owRj0RNbDUASjoeWXnO+RNKDyv/QKBgQDC\nD90EYdeylZbfyk/Unp4h+e4qqs7w/HgdQmGIxbII3l8DRnljvm4TkIz082gitjOR\nA+uc3A31RLwTUsZhBfp0yimOO4jFvphbX2ZreuQs8CztFrYgav5GtgOxNupMUd6+\nbW784sl8ZTjXdjE+lqzbYUUqPs85UjaZeQbaYaefAQKBgQCQEtKryyFS3GVXm1aW\nsmqa8UzMCzciHleHU1hLC3T1JlZtFqg0Z4aANusr9SRcRrl+ewh9evlaqENMZz+j\ntV+HTKQ3n6saXLZp9h6+QyDFoPhkrN97QfM42zeIw1FkGp46VARg2CkYHQn/og6q\ntm//hZZxliBrf0GQhBEkWvAr2g==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-1vhj9@reactnativeapp-a64d2.iam.gserviceaccount.com",
+    "client_id": "102037550763734371199",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-1vhj9%40reactnativeapp-a64d2.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+}

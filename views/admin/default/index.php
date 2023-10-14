@@ -6,7 +6,7 @@ use panix\engine\widgets\Pjax;
 use Google\ApiCore\ApiException;
 use Google\Cloud\Firestore\V1beta1\Document;
 use Google\Cloud\Firestore\V1beta1\FirestoreClient;
-putenv("GOOGLE_APPLICATION_CREDENTIALS=" . __DIR__ . '/reactnativeapp-a64d2-a8482ab39795.json');
+putenv("GOOGLE_APPLICATION_CREDENTIALS=" . __DIR__ . '/ssss.json');
 $firestore = new FirestoreClient();
 
 $response = $firestore->getDocument('users');

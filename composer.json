@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "google/cloud-firestore": "*"
+        "google/cloud-firestore": "*",
+        "edwinhoksberg/php-fcm": "^1.2"
     },
     "autoload": {
         "psr-4": {
