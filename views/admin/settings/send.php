@@ -2,32 +2,30 @@
 
 use panix\engine\Html;
 use panix\engine\bootstrap\ActiveForm;
-use yii\helpers\ArrayHelper;
 use yii\web\View;
 
 /**
  * @var \panix\engine\bootstrap\ActiveForm $form
- * @var \panix\mod\fcm\models\SettingsForm $model
+ * @var \panix\mod\fcm\models\NotificationForm $model
  */
 
-$form = ActiveForm::begin(['id' => 'fcm-form']);
-
-// Instantiate the push notification request object.
-$notification = new \Fcm\Push\Notification();
-
-// Enhance the notification object with our custom options.
-$notification->addRecipient($deviceId)
-    ->setTitle('Новое поступление')
-    ->setBody("👞 👟 🥾 🥿 👠 👡 🩰 👢 Добавлено 98 новинок\nКроссовки, Ботинки, Кеды и т.д.")
-    ->setColor('#20F037')
-    ->setSubtitle('sub') //iOS only: and setBbadge
-    ->setSound("default")
-    //->setTag('test')
-    //->setIcon("https://optikon.com.ua/uploads/categories_icons/home3.png")
-    ->setIcon(Yii::getAlias('@fcm/home.png'))
-    //->addDataArray($myObjArray)
-    ->addData('action_url', 'https://option.com.ua/new');
-$notification2 = $client->send($notification);
+$form = ActiveForm::begin(['id' => 'notification-form']);
 
 ?>
 
+<div class="card">
+    <div class="card-header">
+        <h5><?= $this->context->pageName ?></h5>
+    </div>
+    <div class="card-body">
+        <?= $form->field($model, 'device_id'); ?>
+        <?= $form->field($model, 'title'); ?>
+        <?= $form->field($model, 'body')->textarea(); ?>
+
+    </div>
+    <div class="card-footer text-center">
+        <?= Html::submitButton('submit'); ?>
+    </div>
+</div>
+
+<?php ActiveForm::end(); ?>
