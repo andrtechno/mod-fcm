@@ -20,11 +20,6 @@ class SettingsForm extends SettingsModel
         return [
             [['server_key'], "required"],
             [['sender_id'], 'string'],
-            //[['out_stock_delete', 'brand', 'tm'], 'boolean'],
-            //['apikey', 'match', 'pattern' => "/^[a-zA-Z0-9\._\-]+$/u"],
-            //['hook_key', 'match', 'pattern' => "/^[a-zA-Z0-9]+$/u", 'message' => 'Только буквы и цифры'],
-            // [['categories_shoes'], 'safe'],
-            //[['bags_type'], 'default', 'value' => ''], //,'categories_shoes'
         ];
     }
 
