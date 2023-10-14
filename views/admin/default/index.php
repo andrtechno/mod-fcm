@@ -1,23 +1,8 @@
 <?php
+
 use panix\engine\grid\GridView;
-use panix\engine\widgets\Pjax;
+use yii\helpers\Html;
 
-
-use Google\ApiCore\ApiException;
-use Google\Cloud\Firestore\V1beta1\Document;
-use Google\Cloud\Firestore\V1beta1\FirestoreClient;
-putenv("GOOGLE_APPLICATION_CREDENTIALS=" . __DIR__ . '/ssss.json');
-$firestore = new FirestoreClient();
-
-$response = $firestore->getDocument('users');
-
-
-
-print_r($response);
-
-Pjax::begin([
-    'dataProvider' => $dataProvider
-]);
 
 echo GridView::widget([
     'tableOptions' => ['class' => 'table table-striped'],
@@ -27,7 +12,24 @@ echo GridView::widget([
     'showFooter' => true,
     //   'footerRowOptions' => ['class' => 'text-center'],
     'rowOptions' => ['class' => 'sortable-column'],
-
+    'columns' => [
+        'token',
+        'platform',
+        'created_at' => [
+            'attribute' => 'created_at',
+            'class' => 'panix\engine\grid\columns\jui\DatepickerColumn',
+        ],
+        [
+            'class' => 'panix\engine\grid\columns\ActionColumn',
+            'filter' => false,
+            'template' => '{send}',
+            'buttons' => [
+                'send' => function ($url, $model) {
+                    return Html::a('Send', ['/admin/fcm/settings/send', 'token' => $model->token], ['class' => 'btn btn-sm btn-success']);
+                }
+            ]
+        ]
+    ]
 ]);
 
-Pjax::end();
+

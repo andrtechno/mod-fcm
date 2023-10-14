@@ -1,4 +1,4 @@
-Module fcm
+Module Firebase cloud messaging
 ===========
 
 [![Latest Stable Version](https://poser.pugx.org/panix/mod-fcm/v/stable)](https://packagist.org/packages/panix/mod-fcm)
@@ -35,4 +35,13 @@ Add config file
 ?>
 ```
 to the require section of your `composer.json` file.
+
+
+
+API docs
+----
+
+| Method  | URL                              | Data                    |
+| :-----: | :------------------------------- | :---------------------: |
+| POST    | /api/fcm/index/add-device    | ```{token:XXX, ...}```            |
 

@@ -41,5 +41,34 @@ class Module extends WebModule implements BootstrapInterface
 
     }
 
+    public function getAdminMenu()
+    {
+        return [
+            'modules' => [
+                'items' => [
+                    [
+                        'label' => Yii::t($this->id . '/default', 'MODULE_NAME'),
+                        'url' => '#',
+                        'icon' => $this->icon,
+                        'visible' => true,
+                        'items' => [
+                            [
+                                'label' => Yii::t('app/default', 'Send message'),
+                                'url' => ['/admin/fcm/settings/send'],
+                                'icon' => 'settings',
+                            ],
+                            [
+                                'label' => Yii::t('app/default', 'SETTINGS'),
+                                'url' => ['/admin/fcm/settings'],
+                                'icon' => 'settings',
+                            ],
+
+                        ]
+                    ],
+
+                ],
+            ],
+        ];
+    }
 
 }

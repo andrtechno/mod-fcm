@@ -61,7 +61,10 @@ class SettingsController extends AdminController
             $this->pageName
         ];
 
-        $deviceId = 'ccDr-wRIT-Cn-eCboSww4P:APA91bE6MildSU3fmFP9s7iJj8CeiI_YA7bMHitd0IxiSqxwxuxELkiTB2KRu8D4PZCP7f-HjoCDOW_ZakiRp35yc1mhfJ23LF0s5l75MWS_Yx_WPzCrC-UHJ8dcDhhcsAHYS7J4iB_z';
+        if(Yii::$app->request->get('token')){
+            $deviceId=Yii::$app->request->get('token');
+        }
+        //$deviceId = 'ccDr-wRIT-Cn-eCboSww4P:APA91bE6MildSU3fmFP9s7iJj8CeiI_YA7bMHitd0IxiSqxwxuxELkiTB2KRu8D4PZCP7f-HjoCDOW_ZakiRp35yc1mhfJ23LF0s5l75MWS_Yx_WPzCrC-UHJ8dcDhhcsAHYS7J4iB_z';
         $client = new \Fcm\FcmClient(Yii::$app->settings->get('fcm', 'server_key'), '');
 
 
