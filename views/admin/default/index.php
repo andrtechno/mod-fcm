@@ -25,7 +25,7 @@ echo GridView::widget([
             'template' => '{send}',
             'buttons' => [
                 'send' => function ($url, $model) {
-                    return Html::a('Send', ['/admin/fcm/settings/send', 'token' => $model->token], ['class' => 'btn btn-sm btn-success']);
+                    return Html::a('Send push', ['/admin/fcm/settings/send', 'token' => $model->token], ['class' => 'btn btn-sm btn-success']);
                 }
             ]
         ]
