@@ -54,18 +54,16 @@ class DefaultController extends AdminController
         $model->body = '👞 👟 🥾 🥿 👠 👡 🩰 👢 Добавлено 98 новинок\nКроссовки, Ботинки, Кеды и т.д.';
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
-
+                $myObjArray = ['screen' => 'NewScreen'];
                 $notification = new \Fcm\Push\Notification();
-                $notification->addRecipient($model->device_id)
-                    ->setTitle($model->title)
-                    ->setBody($model->body)
-                    ->setColor('#20F037')
-                    ->setSubtitle('sub') //iOS only: and setBbadge
-                    ->setSound("default")
-                    //->setTag('test')
-                    //->setIcon('ic_notification.png') //folder android drawable-XYdi
-                    //->addDataArray($myObjArray)
-                    ->addData('action_url', 'https://option.com.ua/new');
+                $notification->addRecipient($model->device_id);
+                $notification->setTitle($model->title);
+                $notification->setBody($model->body);
+                //$notification->setColor('#20F037');
+                //$notification->setSubtitle('sub'); //iOS only: and setBbadge
+                //$notification->setSound("default");
+                //->setIcon('ic_notification.png') //folder android drawable-XYdi
+                $notification->addDataArray($myObjArray);
                 $result = $client->send($notification);
 
                 if ($result['success']) {

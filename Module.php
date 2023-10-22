@@ -15,8 +15,6 @@ use app\web\themes\dashboard\sidebar\BackendNav;
  * Class Module
  * @package panix\mod\fcm
  *
- * @property array|string|null $loginRedirect
- * @property boolean $useEmail
  */
 class Module extends WebModule implements BootstrapInterface
 {
