@@ -1,6 +1,5 @@
 <?php
 
-use panix\engine\Html;
 use panix\engine\bootstrap\ActiveForm;
 use yii\web\View;
 
@@ -20,6 +19,15 @@ $form = ActiveForm::begin(['id' => 'fcm-form']);
     <div class="card-body">
         <?= $form->field($model, 'server_key'); ?>
         <?= $form->field($model, 'sender_id'); ?>
+
+        <?php
+        echo $form->field($model, 'tokens')->widget(\panix\ext\multipleinput\MultipleInput::className(), [
+            'max' => 10,
+            'allowEmptyList' => false,
+            'enableGuessTitle' => true,
+            'addButtonPosition' => \panix\ext\multipleinput\MultipleInput::POS_ROW, // show add button in the header
+        ])->label(false);
+        ?>
     </div>
     <div class="card-footer text-center">
         <?= $model->submitButton(); ?>

@@ -1,9 +1,17 @@
 <?php
 
 use panix\engine\grid\GridView;
-use yii\helpers\Html;
+use panix\engine\Html;
+
+/**
+ * @var $this \yii\web\View
+ */
+
+panix\engine\assets\ClipboardAsset::register($this);
 
 
+//common.clipboard
+//ClipboardAsset
 echo GridView::widget([
     'tableOptions' => ['class' => 'table table-striped'],
     'dataProvider' => $dataProvider,
@@ -12,7 +20,12 @@ echo GridView::widget([
     'showFooter' => true,
     'rowOptions' => ['class' => 'sortable-column'],
     'columns' => [
-        'token',
+        'token' => [
+            'format' => 'raw',
+            'value' => function ($model) {
+                return Html::tag('code', $model->token,['id'=>'copy-it'.$model->id]).' - '.Html::icon('copy',['class'=>'btn btn-sm btn-outline-primary coping','data-clipboard-target'=>'#copy-it'.$model->id]);
+            }
+        ],
         'platform',
         'created_at' => [
             'attribute' => 'created_at',
@@ -30,5 +43,12 @@ echo GridView::widget([
         ]
     ]
 ]);
+$this->registerJs("
+    var clipboard = new ClipboardJS('.coping');
+    clipboard.on('success', function (e) {
+        common.notify('Скопировано!', 'success');
+    });
+",\yii\web\View::POS_END);
+
 
 

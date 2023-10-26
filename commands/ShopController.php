@@ -119,18 +119,20 @@ class ShopController extends ConsoleController
 
         $res = $query->all();
 
+        $list = [];
         foreach ($res as $item) {
             //поставшик
             //echo $item['supplier']['name'] . '(' . $item['counter'] . ')' . PHP_EOL;
 
             //категории
             echo $item['mainCategory']['name_uk'] . '(' . $item['counter'] . ')' . PHP_EOL;
+            $list[]=$item['mainCategory']['name_uk'] . '(' . $item['counter'] . ')';
         }
 
-        die;
+        //die;
         $data = ['screen' => 'NewScreen'];
-        $title = 'Добавлено 98 новинок';
-        $body = '👞 👟 🥾 🥿 👠 👡 🩰 👢 Добавлено 98 новинок\nКроссовки, Ботинки, Кеды и т.д';
+        $title = '98 новинок';
+        $body = ''.implode(', ',$list);
         $this->push($title, $body, $data);
         echo $query->count();
     }

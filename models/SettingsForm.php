@@ -14,12 +14,14 @@ class SettingsForm extends SettingsModel
 
     public $server_key;
     public $sender_id;
+    public $tokens;
 
     public function rules()
     {
         return [
             [['server_key'], "required"],
             [['sender_id'], 'string'],
+            [['tokens'], 'safe'],
         ];
     }
 
@@ -32,6 +34,7 @@ class SettingsForm extends SettingsModel
         return [
             'server_key' => '',
             'sender_id' => '',
+            'tokens' => ''
         ];
     }
 
