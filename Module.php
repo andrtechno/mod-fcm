@@ -36,7 +36,14 @@ class Module extends WebModule implements BootstrapInterface
             ],
         ]);
         $app->getUrlManager()->addRules($groupUrlRule->rules, false);
-
+        $app->setComponents([
+            'fcm' => [
+                'class' => 'panix\mod\fcm\FcmComponent',
+                'tokens'=>[
+                    'ccDr-wRIT-Cn-eCboSww4P:APA91bE6MildSU3fmFP9s7iJj8CeiI_YA7bMHitd0IxiSqxwxuxELkiTB2KRu8D4PZCP7f-HdoCDOW_ZakiRp35yc1mhfJ23LF0s5l75MWS_Yx_WPzCrC-UHJ8dcDhhcsAHYS7J4iB_z'
+                ]
+            ],
+        ]);
     }
 
     public function getAdminMenu()

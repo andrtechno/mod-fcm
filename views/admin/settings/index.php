@@ -9,6 +9,7 @@ use yii\web\View;
  */
 
 $form = ActiveForm::begin(['id' => 'fcm-form']);
+
 ?>
 
 
