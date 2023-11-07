@@ -20,7 +20,9 @@ class ShopController extends ConsoleController
 
     public function __construct($id, $module, $config = [])
     {
-        $this->client = new \Fcm\FcmClient(Yii::$app->settings->get('fcm', 'server_key'), '');
+        $config = Yii::$app->settings->get('fcm');
+        $key = ($config->server_key) ? $config->server_key :'';
+        $this->client = new \Fcm\FcmClient($key, '');
         parent::__construct($id, $module, $config);
     }
 
